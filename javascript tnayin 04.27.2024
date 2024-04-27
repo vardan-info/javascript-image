@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../css/top.css">
+       <script src="../js/to.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="blok1">
+               <img id="pic1" src="../images/arevacaxik.jpg" width="70px" height="70px"  onmouseout="small(id)">
+
+
+    </div>
+     <div class="blok2">
+           <img id="pic2" src="../images/images-java.png" width="70px" height="70px"  onmouseout="small(id)">
+
+
+     </div>
+     <div class="blok3">
+
+         <img id="pic3"  src="../images/hello%20panda.jpg" width="100px" height="100px" id="img1">
+     </div>
+     <div class="blok4">
+          <img id="pic4" src="../images/titer.jpg" width="70px" height="70px" onmouseover="big(id)" onmouseout="small(id)">
+     </div>
+
+</div>
+<input type="text" id="fname" name="fname" width="100px" height="100px">
+<input type="text" id="fname1" name="fname" width="100px" height="100px">
+<input type="button" value="Sxmi inz" onclick="a()">
+</body>
+</html>
+
+-------------------------------------------------
+==========================
+let picture1 = document.getElementById("pic1").src;
+let picture2 = document.getElementById("pic2").src;
+let picture3 = document.getElementById("pic3").src;
+let picture4 = document.getElementById("pic4").src;
+function a() {
+    let x = parseInt(document.getElementById("fname").value);
+    let y = parseInt(document.getElementById("fname1").value);
+    if (x == 1 && y == 2 || x == 2 && y == 1) {
+
+        let temp = document.getElementById("pic1").src;
+        document.getElementById("pic1").src = document.getElementById("pic2").src;
+        document.getElementById("pic2").src = temp;
+
+    }
+
+}
+
+==========================================================
+.container{
+    display:flex;
+
+    height:200px;
+}
+
+.blok1{
+    width:100px;
+    height:100px;
+}
+
+.blok2{
+
+    width:100px;
+    height:100px;
+    margin:0 auto;
+}
+
+.blok3{
+
+    width:100px;
+    height:100px;
+    margin:0 auto;
+}
+
+.blok4{
+
+    width:100px;
+    height:100px;
+    margin:0 auto;
+}
+
+#fname{
+
+margin-left: 300px;
+}
+
+#fname1{
+
+margin-left: 300px;
+}
